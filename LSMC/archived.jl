@@ -1,3 +1,4 @@
+# import LinearAlgebra
 
 # not used, used for pricing with entire grid, not necessary
 function pricer(numSteps, numSims, option, poGrid_final)
@@ -26,7 +27,7 @@ function errorDetect(X)
 end
 
 
-
+# & !(sGrid[1, numSteps-i+1] == sGrid[2, numSteps-i+1] == sGrid[3, numSteps-i+1])
 
 
 

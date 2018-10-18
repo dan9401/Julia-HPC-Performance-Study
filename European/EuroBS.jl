@@ -1,6 +1,4 @@
-# using Pkg
-# Pkg.add("Distributions")
-using Distributions
+import Distributions
 include("Option.jl")
 
 function euroBS(option::Option)
@@ -9,9 +7,9 @@ function euroBS(option::Option)
     d1 = (log(S/K) + (r + σ^2.0/2.0)*T) / σ / sqrt(T)
     d2 = d1 - σ * sqrt(T)
     if corp == CALL
-        price = cdf(nd, d1) * S - cdf(nd, d2) * K * exp(-r * T)
+        price = Distributions.cdf(nd, d1) * S - Distributions.cdf(nd, d2) * K * exp(-r * T)
     elseif corp == PUT
-        price = - cdf(nd, -d1) * S + cdf(nd, -d2) * K * exp(-r * T)
+        price = - Distributions.cdf(nd, -d1) * S + Distributions.cdf(nd, -d2) * K * exp(-r * T)
     end
     return price
 end
