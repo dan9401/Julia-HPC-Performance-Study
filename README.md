@@ -1,2 +1,3 @@
-# Julia-Option-Pricing-HPC
-This is a repository for Dan's project in Autumn 2018
+# Julia HPC Performance Study
+
+Autumn 2018
