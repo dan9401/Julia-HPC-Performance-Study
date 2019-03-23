@@ -1,3 +1,1 @@
-# Julia High Performance Computing Study
-
-Autumn 2018
+# Julia HPC Study - Autumn 2018
